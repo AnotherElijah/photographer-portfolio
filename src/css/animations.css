@@ -1,0 +1,37 @@
+
+.about{
+    transition: transform .3s ease-in, opacity .5s!important;
+}
+/*preload*/
+.home,
+.portfolio,
+.about,
+.contact{
+    -webkit-animation-name: preload; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: preload;
+    animation-duration: 2s;
+}
+@-webkit-keyframes preload {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+/*slide up*/
+.slide-up{
+    opacity: 0!important;
+    transform: translate(0px, -100%);
+    transition: opacity 0.3s ease-in, transform 0.3s ease-in!important;
+
+    -webkit-animation-name: preload!important; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: .5s!important; /* Safari 4.0 - 8.0 */
+    animation-name: preload!important;
+    animation-duration: .5s!important;
+}
+@-webkit-keyframes slide-up {
+    from {opacity: 1;
+        transform: translate(0px, 0);
+    }
+    to {opacity: 0;
+        transform: translate(0px, -100%);
+    }
+}
