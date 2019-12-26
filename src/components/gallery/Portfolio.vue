@@ -26,51 +26,64 @@
                         <div class="content">
                             <ul>
                                 <!--??????????????????????-->
-                                <li data-album="black-white"><button :click="()=>this.switchSection(1)">Black & White</button></li>
-                                <li data-album="darker-than-black"><button :click="()=>this.switchSection(2)">Darker Than Black</button></li>
+                                <li data-album="black-white"><a v-on:click="switchSection(1)">Black & White</a></li>
+                                <li data-album="darker-than-black"><a v-on:click="switchSection(2)">Darker Than
+                                    Black</a>
+                                </li>
                                 <li data-album="madness"><span>Madness</span></li>
                                 <li data-album="shades"><span>Shades</span></li>
                                 <li data-album="sleeping-beauty"><span>Sleeping Beauty</span></li>
                             </ul>
                         </div>
-                        <!-- .content -->
                     </div>
-                    <!-- .albums -->
                 </div>
-                <!-- .row -->
 
-                <!-- .row -->
                 <div class="grid row">
-                    <GallerySection v-if="this.currentSection===1" :current-section="this.currentSection"></GallerySection>
-                    <GallerySection v-if="this.currentSection===2" :current-section="this.currentSection"></GallerySection>
+                    <div>
+                        <Gallery-section v-if="this.currentSection===1"
+                                         :current-section="1"></Gallery-section>
+                    </div>
+                    <br>
+                    <div>
+                        <Gallery-section v-if="this.currentSection===2"
+                                         :current-section="2"></Gallery-section>
+                    </div>
+
+
                 </div>
-                <!-- .row -->
-
             </div>
-            <!-- .container -->
-
         </section>
-        <!-- section -->
-
     </div>
 </template>
 <script>
     import GallerySection from "@/components/gallery/Gallery-section";
+
     export default {
         name: "Portfolio",
         components: {GallerySection},
-        created(){
+        created() {
 
         },
-        data: function(){
-          return {
-              currentSection: 1
-          }
+        data() {
+            return {
+                section: 1
+            }
         },
-        methods:{
-            switchSection: function(section = 1){
-                console.log('***')
+        computed: {
+            currentSection:
+                {
+                    set: function (section) {
+                        return this.section = section;
+                    },
+                    get: function () {
+                        return this.section
+                    }
+                }
+        },
+        methods: {
+            switchSection(section) {
                 this.currentSection = section;
+                console.log('currentSection: ' + this.currentSection)
             }
         }
     }
