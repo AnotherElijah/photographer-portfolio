@@ -28,7 +28,7 @@
 
                 <ul>
                     <li class="active">
-                        <a href="work"><h2>Work</h2></a>
+                        <a href="/"><h2>Home</h2></a>
                     </li>
                     <li>
                         <a href="portfolio"><h2>Portfolio</h2></a>
