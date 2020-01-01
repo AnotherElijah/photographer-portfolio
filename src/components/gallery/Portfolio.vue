@@ -26,13 +26,13 @@
                         <div class="content">
                             <ul>
                                 <!--??????????????????????-->
-                                <li data-album="black-white"><a v-on:click="switchSection(1)">Black & White</a></li>
-                                <li data-album="darker-than-black"><a v-on:click="switchSection(2)">Darker Than
-                                    Black</a>
+                                <li data-album="black-white"><span v-on:click="switchSection(1)">Black & White</span></li>
+                                <li data-album="darker-than-black"><span v-on:click="switchSection(2)">Darker Than
+                                    Black</span>
                                 </li>
-                                <li data-album="madness"><span>Madness</span></li>
-                                <li data-album="shades"><span>Shades</span></li>
-                                <li data-album="sleeping-beauty"><span>Sleeping Beauty</span></li>
+                                <li data-album="madness" v-on:click="switchSection(3)"><span>Madness</span></li>
+                                <li data-album="shades" v-on:click="switchSection(4)"><span>Shades</span></li>
+                                <li data-album="sleeping-beauty" v-on:click="switchSection(5)"><span>Sleeping Beauty</span></li>
                             </ul>
                         </div>
                     </div>
@@ -48,8 +48,18 @@
                         <Gallery-section v-if="this.currentSection===2"
                                          :current-section="2"></Gallery-section>
                     </div>
-
-
+                    <div>
+                        <Gallery-section v-if="this.currentSection===3"
+                                         :current-section="3"></Gallery-section>
+                    </div>
+                    <div>
+                        <Gallery-section v-if="this.currentSection===4"
+                                         :current-section="4"></Gallery-section>
+                    </div>
+                    <div>
+                    <Gallery-section v-if="this.currentSection===5"
+                                     :current-section="5"></Gallery-section>
+                </div>
                 </div>
             </div>
         </section>
@@ -83,7 +93,6 @@
         methods: {
             switchSection(section) {
                 this.currentSection = section;
-                console.log('currentSection: ' + this.currentSection)
             }
         }
     }

@@ -21,7 +21,7 @@
                     <div class="home-container main item twelve columns">
                         <span class="text margin-bot--15">marilyn black photography</span>
                         <h1 class="title title-very-large u-font-light margin-bot--25">brilliant measures</h1>
-                        <a href="portfolio.html" class="button line light">Explore More</a>
+                        <a href="portfolio" class="button line light">Explore More</a>
                     </div>
 
                 </div>

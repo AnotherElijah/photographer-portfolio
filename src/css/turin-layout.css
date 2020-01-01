@@ -29,7 +29,7 @@ nav.navigation {
     position: fixed;
     right: 0px;
     top: -100%;
-    z-index: 100;
+    z-index: 15;
 }
 
 nav.navigation.active {
@@ -169,7 +169,7 @@ header.header {
     position: absolute;
     top: 0px;
     width: 100%;
-    z-index: 1000;
+    z-index: 16;
 }
 
 header.header.active {
@@ -213,7 +213,7 @@ header.header .menu {
     height: 2px;
     background: #FFFFFF;
     position: relative;
-	z-index: 100;
+	z-index: 15;
     transition: ease-in background 0.2s;
 }
 
