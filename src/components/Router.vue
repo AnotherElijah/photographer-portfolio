@@ -1,6 +1,6 @@
 <template>
     <div>
-        <component @switchPage="switchWithSlide" v-bind:showUpEffect="showUpEffect" v-bind:is="ViewComponent"></component>
+        <component v-bind:is="ViewComponent"></component>
     </div>
 </template>
 
@@ -36,23 +36,7 @@
                     window.location.pathname = '/'+component
                 },500)
             },
-            switchWithSlide: function(emittedData){
-                this.showUpEffect = emittedData.effect;
-                this.forceSwitch(emittedData.component);
-            }
         },
-        //switchEffect: slideDown, slideUp
-        data(){
-            return {
-                showUpEffect: null
-            }
-        },
-        created(){
-            console.log('created')
-        },
-        updated(){
-            console.log('router updated: '+ this.showUpEffect)
-        }
     }
 </script>
 

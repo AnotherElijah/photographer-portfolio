@@ -29,11 +29,11 @@ nav.navigation {
     position: fixed;
     right: 0px;
     top: -100%;
-    z-index: 15;
 }
 
 nav.navigation.active {
     top: 0px;
+    z-index: 15;
 }
 
 nav.navigation .container .header {
@@ -215,6 +215,7 @@ header.header .menu {
     position: relative;
 	z-index: 15;
     transition: ease-in background 0.2s;
+    top:8px;
 }
 
 header.header .menu:after {
@@ -363,7 +364,14 @@ section.landing .border {
     right: 25px;
     top: 25px;
 }
-
+@media (max-width: 600px){
+    section.landing .border {
+        bottom: 12px;
+        left: 12px;
+        right: 12px;
+        top: 12px;
+    }
+}
 section.landing .image,
 section.landing .slide {
     background-position: center center;

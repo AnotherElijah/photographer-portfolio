@@ -3,7 +3,7 @@
     <nav :class="active?'navigation active':'navigation'">
 
         <!-- .container -->
-        <div class="container fullscreen menu-container">
+        <div class="container fullscreen menu-container menu-wrapper">
 
             <!-- .row -->
             <div class="header row" style="padding: 12vh;">
@@ -89,5 +89,7 @@
 </script>
 
 <style scoped>
-
+    .menu-wrapper{
+        min-height: 568px;
+    }
 </style>

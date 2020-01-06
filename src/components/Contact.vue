@@ -29,8 +29,6 @@
 
                         <p class="text">23 South Broadway, Suite 11, Salem,<br>NH 03079, USA</p>
 
-                        <a v-on:click="switchPage" class="button icon icon-arrow-top dark margined"></a>
-
                     </div>
 
                 </div>

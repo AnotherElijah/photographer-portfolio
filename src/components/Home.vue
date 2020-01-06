@@ -1,10 +1,10 @@
 <template>
 
     <!-- wrapper -->
-    <div class="wrapper">
+    <div class="">
 
         <!-- section -->
-        <section class="section landing home fullscreen">
+        <section :class="window.width<901?'section landing home fullscreen background':'section landing home fullscreen'">
 
             <!-- .background -->
             <div class="background video" data-type="video" data-url="./images/home/video/background.mp4" data-poster="./images/home/video/background.jpg"></div>
@@ -32,8 +32,8 @@
 
         </section>
         <!-- section -->
-        <video autoplay muted loop id="myVideo">
-            <source src="../assets/Storm - 16160.mp4" type="video/mp4">
+        <video v-if="window.width>900" autoplay muted loop id="myVideo" width="100%">
+            <source src="../assets/bg-tree.mp4" type="video/mp4">
         </video>
     </div>
 
@@ -46,12 +46,47 @@
         props: ['active'],
         data(){
             return {
-
+                window: {
+                    width: 0,
+                    height: 0
+                }
+            }
+        },
+        created() {
+            window.addEventListener('resize', this.handleResize);
+            this.handleResize();
+        },
+        destroyed() {
+            window.removeEventListener('resize', this.handleResize)
+        },
+        methods: {
+            handleResize() {
+                this.window.width = window.innerWidth;
+                this.window.height = window.innerHeight;
             }
         }
     }
 </script>
 
 <style scoped>
+    section.home.fullscreen.background{
+        background-image: url(../assets/forest-1031022_1920.jpg);
+        background-size: cover;
+        height: 100%;
+    }
+    @media (max-width: 768px){
+        span.text{
+            font-size: 60%;
+        }
+        h1.title {
+            font-size: 304%!important;
+        }
+        a.button{
+            /*width: 33%;*/
+            font-size: 50%;
+            border-bottom-width: 1px;
+            border-top-width: 1px;
+        }
+    }
 
 </style>

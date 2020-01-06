@@ -7,7 +7,7 @@
         <div class="container">
 
             <!-- .row -->
-            <div class="row">
+            <div class="row header-wrapper">
 
                 <!-- .item -->
                 <div class="item one-half column">
@@ -70,5 +70,17 @@
 </script>
 
 <style scoped>
-
+    .header-wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .header-wrapper .one-half{
+        width: auto;
+    }
+    @media (max-width: 600px){
+        .header.animated{
+            padding-top: 50px;
+        }
+    }
 </style>

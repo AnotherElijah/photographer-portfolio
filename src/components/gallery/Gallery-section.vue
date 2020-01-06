@@ -17,7 +17,7 @@
             >
             </LargePicture>
         </div>
-        <loader v-if="loader"></loader>
+        <loader v-bind:showUp="loader"></loader>
     </div>
 </template>
 

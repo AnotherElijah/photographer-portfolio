@@ -24,9 +24,10 @@
 
                         <div class="devider margined"></div>
 
-                        <p class="text">Donec vulputate sit amet elit at posuere. Nulla facilisi. Sed congue, orci in porttitor vestibulum, arcu ligula accumsan sem, ac rutrum dui enim sodales diam. Phasellus id orci et mauris pellentesque laoreet ac posuere velit.</p>
+                        <p class="text">Donec vulputate sit amet elit at posuere. Nulla facilisi. Sed congue, orci in porttitor vestibulum,
+                            arcu ligula accumsan sem, ac rutrum dui enim sodales diam. Phasellus id orci et mauris pellentesque laoreet ac posuere velit.</p>
 
-                        <a v-on:click="switchPage" class="button icon icon-arrow-down dark"><span>contact me</span></a>
+                        <a href="contact"><button class="button dark btn-hover">contact me</button></a>
 
                     </div>
 
@@ -55,12 +56,14 @@
         methods: {
            switchPage(){
                 this.state.urlChange = true;
-                this.$emit('switchPage', {effect: 'slideUp', component: 'contact'})
            }
         }
     }
 </script>
 
 <style scoped>
-
+    .btn-hover:hover{
+        background-color: transparent;
+        color: #ffffff;
+    }
 </style>
