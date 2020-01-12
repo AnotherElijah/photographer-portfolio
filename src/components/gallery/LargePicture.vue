@@ -33,10 +33,16 @@
     }
 
     .lg-image {
-        width: auto;
         max-height: 100vh;
+        width: 100%;
+        max-width: 100vh;
+        height: auto;
     }
-
+@media (max-width: 768px) {
+    .lg-image {
+        max-height: unset;
+    }
+}
     .inner-container {
         display: flex;
         flex-direction: row;
@@ -48,6 +54,20 @@
         position: absolute;
         width: 180px;
         bottom: 45px;
+    }
+    @media (max-width: 768px) {
+        .ctrl-wrapper {
+            position: absolute;
+            width: 180px;
+            bottom: 30px;
+        }
+    }
+    @media (max-width: 768px) and (orientation: landscape){
+        .ctrl-wrapper {
+            position: absolute;
+            width: 180px;
+            bottom: 15px;
+        }
     }
 
     .btn-cross,
@@ -70,4 +90,5 @@
         background-size: cover;
         padding: 15px;
     }
+
 </style>

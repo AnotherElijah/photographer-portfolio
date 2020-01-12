@@ -121,4 +121,17 @@
         background-color: #111111;
         z-index: 16;
     }
+    @media (max-width: 400px){
+        .w-31{
+            width: 28%;
+            overflow: hidden;
+            margin: 2px;
+        }
+        .w-37 {
+            width: 33%;
+            overflow: hidden;
+            margin: 2px;
+            flex-grow: 1;
+        }
+    }
 </style>

@@ -72,8 +72,9 @@
     section.home.fullscreen.background{
         background-image: url(../assets/forest-1031022_1920.jpg);
         background-size: cover;
-        height: 100%;
+        height: 100vh;
     }
+
     @media (max-width: 768px){
         span.text{
             font-size: 60%;

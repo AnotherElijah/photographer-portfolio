@@ -38,6 +38,15 @@
 		position: relative; 
 		width: 100%; 
 	}
+@media (max-width: 600px){
+	.container {
+		display: block;
+		margin: 0 auto;
+		padding: 0px 35px;
+		position: relative;
+		width: 100%;
+	}
+}
 	.container .column,
 	.container .columns {
 		float: left;
@@ -94,11 +103,6 @@
 		.container .row .offset-by-one-half   { margin-left: 52%; }
 
 	}
-@media (max-width: 600px){
-	.container{
-		padding: 0 35px;
-	}
-}
 
 
 /* Base Styles

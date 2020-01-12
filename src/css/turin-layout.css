@@ -371,6 +371,10 @@ section.landing .border {
         right: 12px;
         top: 12px;
     }
+    .portfolio > .container{
+        padding-left: 2px;
+        padding-right: 2px;
+    }
 }
 section.landing .image,
 section.landing .slide {
@@ -1150,7 +1154,14 @@ section.page .content {
     padding-top: 66px;
     text-align: left;
 }
-
+@media (max-width: 600px){
+    section.page .content {
+        margin-left: 0px;
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-bottom: 45px;
+    }
+}
 section.page .content .title {
     margin-bottom: 30px;
     margin-top: 20px;
