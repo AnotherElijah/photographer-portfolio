@@ -13,7 +13,7 @@
             <div class="border"></div>
 
             <!-- .container -->
-            <div class="container vertical-center u-inline-block">
+            <div class="container vertical-center u-inline-block bg-circle">
 
                 <!-- .row -->
                 <div class="row animated">
@@ -69,13 +69,38 @@
 </script>
 
 <style scoped>
+    video{
+        height: 100vh;
+        max-height: unset;
+    }
     section.home.fullscreen.background{
         background-image: url(../assets/forest-1031022_1920.jpg);
         background-size: cover;
         height: 100vh;
     }
+    .section.landing.home.fullscreen{
+        height: 100vh;
+    }
+    .bg-circle{
+        background: radial-gradient(circle, rgba(2, 0, 36, 0) 0%, rgba(37, 22, 22, 0.34217436974789917) 35%, rgba(0,212,255,0) 35.1%);
+        background-size: 1669px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%
 
+    }
+    @media (max-height: 860px){
+        .bg-circle{
+            background: radial-gradient(circle, rgba(2, 0, 36, 0) 0%, rgba(37, 22, 22, 0.34217436974789917) 22%, rgba(0,212,255,0) 39.1%);
+            background-size: 1038px;
+            background-position: center;
+        }
+    }
     @media (max-width: 768px){
+        .bg-circle{
+            background: unset;
+            background-repeat: no-repeat;
+            background-position: 50% 50%
+        }
         span.text{
             font-size: 60%;
         }
