@@ -65,7 +65,7 @@
 
                 <!-- .row -->
                 <div class="copyrights row">
-                    <h6>© 2019 Turin. All Rights Reserved. made by <a href="#" target="_blank">Royalz Store</a>.</h6>
+                    <h6>© 2020 Turin design. Made by <a href="#" target="_blank">Ilja P</a>.</h6>
                 </div>
                 <!-- .row -->
 

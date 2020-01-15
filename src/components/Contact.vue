@@ -23,7 +23,7 @@
 
                         <div class="devider margined"></div>
 
-                        <a href="mailto:email@domain.com" class="underline" target="_blank">info@chrisblack.com</a>
+                        <a href="mailto:email@domain.com" class="underline" target="_blank">ALEXMUR@ALEXMUREX.COM</a>
 
                         <p class="text">+1-855-366-2349</p>
 

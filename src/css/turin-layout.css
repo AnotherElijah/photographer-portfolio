@@ -13,11 +13,7 @@
 	#Article 
 
 ================================================== */
-video{
-    position: fixed;
-    top: 0;
-    z-index: -1;
-}
+
 .home{
     background: linear-gradient(90deg, rgba(255,255,255,0.15) 0%, rgba(182,182,182,0.15) 33%, rgba(214,214,214,0.15) 66%, rgba(227,227,227,0.15) 100%);
 }
